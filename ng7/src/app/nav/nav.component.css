@@ -1,0 +1,35 @@
+header {
+    background-color: #5cb85c;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+}
+nav > a {
+    display: inline-block;
+    min-width: 115px;
+    max-width: 30%;
+    margin: 1em 1em;
+    text-decoration: inherit;
+    color: whitesmoke;
+}
+nav > ul {
+    width: 70%;
+    text-align: right;
+    list-style: none;
+    margin: 1em 1em;
+}
+nav > ul > li {
+    display: inline-block;
+    padding: 0 10px;
+}
+li > a {
+
+}
+a {
+    text-decoration: inherit;
+    color: whitesmoke;
+}

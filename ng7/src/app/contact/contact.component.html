@@ -1,0 +1,26 @@
+<form [formGroup]="msgForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Your name: </label>
+    <input type="text" formControlName="user_name" minlength="4">
+    <div class="error" *ngIf="submitted">
+      <div *ngIf="this.msgForm.controls.user_name.errors.required">
+        username is required </div>
+    </div>
+  </div>
+  <div>
+    <label>Message:</label>
+    <textarea formControlName="user_message" minlength="14"></textarea>
+    <div class="error" *ngIf="submitted">
+        <div *ngIf="this.msgForm.controls.user_message.errors.required">
+          message field is required </div>
+      </div>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+  <div *ngIf="this.msgForm.status=='VALID'">
+<p>Form values:</p>
+<p>Name (Valid!): {{msgForm.controls.user_name.value}}</p>
+<p>Message (Valid!): {{msgForm.controls.user_message.value}}</p>
+  </div>
+</form>
